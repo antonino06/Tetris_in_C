@@ -1,1 +1,1 @@
-# Tetris_in_C
+This is a my reimagining of the original Tetris, programmed in the C language.
