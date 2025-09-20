@@ -20,40 +20,40 @@ bool gameover=0;
 
 int Matrice_Coordinate_Iniziali_Tetramini[7][4][2]=
 {
-	20,20,//S
+	20,0,//S
+	0,20,
+	20,20,
 	0,40,
-	20,40,
-	0,60,
 	
-	20,20,//T
-	0,40,
+	20,0,//T
+	0,20,
+	20,20,
 	20,40,
-	20,60,
 	
 	20,0,//I
 	20,20,
 	20,40,
 	20,60,
 	
-	20,20,//J
-	20,40,
-	0,60,
-	20,60,
-	
-	0,20,//L
-	20,20,
-	20,40,
-	20,60,
-	
-	0,20,//Z
-	0,40,
-	20,40,
-	20,60,
-	
-	0,20,//O
+	20,0,//J
 	20,20,
 	0,40,
 	20,40,
+	
+	0,0,//L
+	20,0,
+	20,20,
+	20,40,
+	
+	0,0,//Z
+	0,20,
+	20,20,
+	20,40,
+	
+	0,0,//O
+	20,0,
+	0,20,
+	20,20,
 };
 
 //Funzione nuovo tetremino
@@ -143,7 +143,7 @@ void Movimento_Verticale(void)
 		{
 			Matrice_tetramini_collocati[Vettore_CoordY_Preced[n]/20][Vettore_CoordX_Preced[n]/20]=numero_colore;
 			//se dopo il movimento verticale c'è una collisione e se una delle coordinate Y dei quadrati del tetramino è negativa vuol dire ho superato il limite superiore quindi game over
-			if(Vettore_CoordY_Preced[n]<0)
+			if(Vettore_CoordY_Preced[n]<1)
 			gameover=1;
 		}
 
