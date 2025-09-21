@@ -143,7 +143,7 @@ void Movimento_Verticale(void)
 		{
 			Matrice_tetramini_collocati[Vettore_CoordY_Preced[n]/20][Vettore_CoordX_Preced[n]/20]=numero_colore;
 			//se dopo il movimento verticale c'è una collisione e se una delle coordinate Y dei quadrati del tetramino è negativa vuol dire ho superato il limite superiore quindi game over
-			if(Vettore_CoordY_Preced[n]<1)
+			if(Vettore_CoordY_Preced[n]<=0)
 			gameover=1;
 		}
 
